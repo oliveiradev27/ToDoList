@@ -1,0 +1,8 @@
+package br.com.senai.todolist.modelo;
+
+public class Lista {
+	private Long id;
+	private String titulo;
+	private Lis
+
+}

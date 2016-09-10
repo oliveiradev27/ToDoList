@@ -1,0 +1,32 @@
+package br.com.senai.todolist.modelo;
+
+public class ItemLista {
+	private Long id;
+	private String descricao;
+	private boolean feito;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public boolean isFeito() {
+		return feito;
+	}
+
+	public void setFeito(boolean feito) {
+		this.feito = feito;
+	}
+
+}
