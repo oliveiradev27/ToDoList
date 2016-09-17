@@ -1,0 +1,12 @@
+package br.com.senai.todolist.dao;
+
+import javax.persistence.EntityManager;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class ListaDao {
+	
+	private EntityManager manager;
+
+}

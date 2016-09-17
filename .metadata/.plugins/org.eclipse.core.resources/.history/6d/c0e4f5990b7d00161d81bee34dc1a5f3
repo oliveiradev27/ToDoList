@@ -1,0 +1,12 @@
+package br.com.senai.todolist.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.senai.todolist.dao.ListaDao;
+
+@RestController
+public class ListaRestController
+{
+	private ListaDao listaDao;
+
+}

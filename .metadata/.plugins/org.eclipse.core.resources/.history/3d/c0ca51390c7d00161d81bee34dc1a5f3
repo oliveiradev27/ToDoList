@@ -1,0 +1,22 @@
+package br.com.senai.todolist.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.senai.todolist.dao.ListaDao;
+
+@RestController
+public class ListaRestController
+{
+	@Autowired
+	private ListaDao listaDao;
+	
+	@RequestMapping(value = "/lista", method = RequestMapping.POST)
+	public ResponseEntity<Lista> inserir(String strLista)
+	{
+		
+	}
+	
+}
