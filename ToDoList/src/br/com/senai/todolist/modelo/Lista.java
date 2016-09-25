@@ -5,10 +5,13 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 public class Lista {
@@ -17,7 +20,7 @@ public class Lista {
 	private Long id;
 	@Column(length=100)
 	private String titulo;
-	@OneToMany(mappedBy="lista", cascade=CascadeType.ALL, orphanRemoval=true)
+	@OneToMany(mappedBy="lista", cascade=CascadeType.ALL, orphanRemoval=true, fetch = FetchType.EAGER) // FecthType
 	private List<ItemLista> itens;
 
 	public Long getId() {
@@ -43,7 +46,8 @@ public class Lista {
 	public void setItens(List<ItemLista> itens) {
 		this.itens = itens;
 	}
-
+	
+	@JsonProperty("feito")
 	public boolean isRealizado()
 	{
 		for(ItemLista item : itens)
